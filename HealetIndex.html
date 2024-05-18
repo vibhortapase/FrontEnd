@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 100vh;
+            width: 100nw;
+            background: url(slider-bg.jpg);
+        }
+
+        header>h2 {
+            color: white;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+        }
+
+        header>.best {
+            height: 20%;
+            width: 35%;
+            /* border: 1px solid white; */
+            color: white;
+            position: absolute;
+            top: 30%;
+            left: 12%;
+        }
+
+        .best>h1 {
+            font-size: 50px;
+        }
+
+        .best>p {
+            font-size: 20px;
+        }
+
+        header>h2 {
+            color: white;
+        }
+
+        .button {
+            position: absolute;
+            top: 70%;
+            left: 12%;
+        }
+
+        .Shop-Now {
+            background-color: transparent;
+            color: orange;
+            border: 1px solid orange;
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 10px 50px;
+        }
+
+        .Shop-Now:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .header-ul {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
+
+        .header-li {
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        .element-nav {
+            text-decoration: none;
+            color: white;
+        }
+
+        .element-nav:hover {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+        }
+
+        /* section {
+            margin-top: 5%;
+            height: 100vh;
+            margin-bottom: 6%;
+        } */
+        .ProductSection {
+            margin-top: 3%;
+            height: 113vh;
+            margin-bottom: 1%;
+            /* background-color: lightgreen; */
+        }
+
+        .latest-product {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        section>.container {
+            /* border: 1px solid black; */
+            height: 648px;
+            width: 85vw;
+            margin-top: 30px;
+            margin-left: 180px;
+        }
+
+        .box {
+            /* border: 1px solid black; */
+            height: 45%;
+            width: 20%;
+            position: relative;
+            display: inline-block;
+            margin: 15px;
+            background-color: rgba(223, 223, 223, 0.948);
+        }
+
+        .new {
+            background-color: white;
+            border-radius: 50%;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .new>p {
+            text-align: center;
+            position: relative;
+            top: 17px;
+            color: black;
+        }
+
+        .ProductImage {
+            height: 140px;
+            width: auto;
+            position: absolute;
+            top: 70px;
+            left: 40px;
+            /* border: 1px solid black; */
+        }
+
+        .P1 {
+            height: 140px;
+            width: auto;
+        }
+
+        .P2 {
+            top: 65px;
+            left: 90px;
+            height: 150px;
+            width: auto;
+        }
+
+        .P3 {
+            left: 90px;
+        }
+
+        .P4 {
+            height: 120px;
+            width: auto;
+        }
+
+        .P6 {
+            top: 80px;
+            height: 110px;
+        }
+
+        .P7 {
+            height: 150px;
+            top: 65px;
+            left: 100px;
+        }
+
+        .P8 {
+            height: 155px;
+            left: 70px;
+            top: 70px;
+        }
+
+        .ProductName {
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            color: black;
+        }
+
+        .ProductPrice {
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            color: black;
+        }
+
+        .ProductPrice>p>span {
+            color: orange;
+        }
+
+        .LatestProductButton {
+            position: absolute;
+            margin: 40px;
+            margin-left: 31%;
+        }
+
+        .ViewAllProduct {
+            font-size: 18px;
+            color: white;
+            background-color: orange;
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 15px 50px;
+        }
+
+        .about {
+            height: 70vh;
+            background-color: aqua;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        .content {
+            height: 70vh;
+            width: auto;
+        }
+
+        .blackBlock {
+            height: 248px;
+            width: 248px;
+            border: 1px solid black;
+            background-color: black;
+            position: relative;
+            top: 90px;
+            left: 186px;
+        }
+
+        .content>img {
+            height: 355px;
+            width: 530px;
+            position: relative;
+            top: -134px;
+            left: 211px;
+        }
+
+        .about>.content>.aboutHeading {
+            height: 353px;
+            width: 450px;
+            position: relative;
+            top: -450px;
+            left: 770px;
+        }
+
+        .button-readMore {
+            position: relative;
+            top: 60px;
+
+        }
+
+        .Read-More {
+            text-decoration: none;
+            color: white;
+            background-color: orange;
+            padding: 13px 40px;
+        }
+
+        .Read-More:hover {
+            color: orange;
+            background-color: white;
+            border: 1px solid orange;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .AfterAbout {
+            height: 90vh;
+            background-color: lightpink;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        .AA-Content {
+            height: 76vh;
+            width: auto;
+            /* border: 1px solid black; */
+            position: relative;
+            margin: auto;
+            top: 7vh;
+            display: flex;
+        }
+
+        .AA-Part {
+            height: auto;
+            width: 60%;
+            /* border: 1px dashed black; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .AA-Part1 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .AA-Part1>img {
+            margin: auto;
+            height: 76vh;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .Part2 {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-content: space-around;
+        }
+
+        .AA-Image1 {
+            height: 50%;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+
+        .AA-Image2 {
+            height: 50%;
+            width: auto;
+            /* border: 1px solid blue; */
+            display: flex;
+            align-items: end;
+        }
+
+        .AA-Image1>img {
+            height: 98%;
+            width: 98%;
+        }
+
+        .AA-Image2>img {
+            height: 98%;
+            width: 98%;
+        }
+
+        .AA-Part1>.offer {
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            height: 250px;
+            width: 350px;
+            top: 20px;
+            left: 30px;
+        }
+
+        .AA-Image1>.offer-A {
+            font-size: 20px;
+            color: white;
+            position: absolute;
+            right: 20px;
+            top: 150px;
+        }
+
+        .AA-Image2>.offer-B {
+            font-size: 20px;
+            color: white;
+            position: absolute;
+            bottom: 20px;
+            right: 410px;
+        }
+
+        /* <!-- After About Before Blog Section Ends --> */
+
+        .blog {
+            height: 100vh;
+            /* background-color: antiquewhite; */
+            padding-top: 20px;
+        }
+
+        .blog-box {
+            height: 700px;
+            width: 75vw;
+            /* border: 1px solid black; */
+            position: relative;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .blog-box>.blog1 {
+            height: 630px;
+            width: 550px;
+            background-color: rgba(211, 211, 211, 0.236);
+        }
+
+        .blog-box>.blog2 {
+            height: 630px;
+            width: 550px;
+            background-color: rgba(211, 211, 211, 0.236);
+        }
+
+        .blog1>img {
+            height: 430px;
+            width: 550px;
+        }
+
+        .blog2>img {
+            height: 430px;
+            width: 550px;
+        }
+
+        .blog-date {
+            height: 60px;
+            width: 60px;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+            border: 3px solid white;
+            position: relative;
+            top: -55px;
+            left: 20px;
+            text-align: center;
+        }
+
+        .blog-detail {
+            position: relative;
+            left: 20px;
+            top: -35px;
+            overflow-wrap: break-word;
+        }
+
+        .blog-bt-ReadMore {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            text-decoration: none;
+            padding: 10px 50px;
+        }
+
+        .blog-bt-ReadMore:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* <!-- TESTIMONIAL Section Start --> */
+        .TESTIMONIAL {
+            height: 80vh;
+            width: auto;
+            background-color: beige;
+            margin-top: 100px;
+        }
+
+        .TestimonialCard {
+            height: 330px;
+            width: 800px;
+            margin: auto;
+            position: relative;
+            top: 50px;
+            background-color: black;
+            border-radius: 15px;
+        }
+
+        .TestimonialCard>img {
+            border-radius: 50%;
+            border: 7px solid grey;
+            height: 120px;
+            position: relative;
+            top: 20px;
+            left: 41%;
+        }
+
+        .TestimonialCard>h2 {
+            color: orange;
+            text-align: center;
+            position: relative;
+            top: 30px;
+        }
+
+        .TestimonialCard>p {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            top: 25px;
+        }
+
+        .TestimonialCard>i {
+            color: white;
+            position: relative;
+            left: 49%;
+            top: 30px;
+        }
+
+        .arrow {
+            height: fit-content;
+            width: 100px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            position: relative;
+            top: 100px;
+            margin: auto;
+        }
+
+        .arrow-left {
+            height: 40px;
+            width: 40px;
+            background-color: orange;
+            color: white;
+            border-radius: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-right {
+            height: 40px;
+            width: 40px;
+            background-color: orange;
+            color: white;
+            border-radius: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow>a {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Footer Section Start */
+        footer {
+            height: 63vh;
+            /* background-color: teal; */
+        }
+
+        .info {
+            position: relative;
+            top: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        form>input {
+            height: 50px;
+            width: 45vw;
+            padding-left: 15px;
+            border-radius: 0;
+            border: 0;
+        }
+
+        .arrow-right-footer {
+            height: 50px;
+            width: 50px;
+            background-color: orange;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+        }
+
+        .Media {
+            display: flex;
+            flex-direction: row;
+            margin-left: 40px;
+        }
+
+        .socialMedia {
+            color: white;
+            height: 49px;
+            width: 50px;
+            border: 1px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 10px;
+        }
+
+        .endPart {
+            height: 210px;
+            width: 1100px;
+            margin: auto;
+            position: relative;
+            top: 80px;
+            display: flex;
+            flex-direction: row;
+            /* border: 2px solid red; */
+        }
+
+        .end-navBar {
+            color: white;
+            width: 240px;
+            /* border: 1px solid red */
+        }
+
+        .footerMenu-ul {
+            list-style-type: none;
+        }
+
+        .footerMenu-li {
+            font-size: 20px;
+            margin-bottom: 13px;
+        }
+
+        .element-End-nav {
+            text-decoration: none;
+            color: white;
+        }
+
+        .element-End-nav:hover {
+            color: orange;
+        }
+
+        .instagram {
+            width: 320px;
+            color: white;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .instagramImg {
+            height: 80px;
+            width: 310px;
+            /* border: 1px solid yellow; */
+            display: flex;
+            flex-direction: row;
+            align-content: space-evenly;
+            font-size: 18px;
+        }
+
+        .imageCover {
+            height: 70px;
+            width: 70px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .detailsCover {
+            width: 200px;
+            /* border: 1px solid green; */
+            position: relative;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .end-aboutus {
+            width: 390px;
+            color: white;
+            /* border: 1px solid red; */
+            text-align: inherit;
+        }
+
+        .aboutDetails {
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .Contactus {
+            width: 240px;
+            color: white;
+        }
+
+        .ContactDetail {
+            height: 100px;
+            margin-top: 15px;
+            /* border: 1px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .location{
+            width: 200px;
+            /* border: 1px solid orange; */
+            display: flex;
+        }
+        .detailsAlign{
+            position: relative;
+            top: -2px;
+            left: 30px;
+        }
+        
+        .call{
+            width: 200px;
+            /* border: 1px solid orange; */
+            display: flex;
+        }
+
+        .email{
+            width: 200px;
+            /* border: 1px solid orange; */
+            display: flex;
+        }
+
+        .ContactDetail > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .end-content {
+            height: 376px;
+            width: 100%;
+            background-color: black;
+        }
+
+        .copywrite>p {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and Home Page Starts -->
+    <header>
+        <h2><b>Healet</b></h2>
+        <ul class="header-ul">
+            <li class="header-li"><a href="HealetIndex.html" class="element-nav">HOME</a></li>
+            <li class="header-li"><a href="about.html" class="element-nav">ABOUT</a></li>
+            <li class="header-li"><a href="shop.html" class="element-nav">SHOP</a></li>
+            <li class="header-li"><a href="blog.html" class="element-nav">BLOG</a></li>
+        </ul>
+        <div class="best">
+            <h1>Best Jewellery <br>
+                Collection</h1>
+            <br>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem</p>
+        </div>
+        <div class="button">
+            <a href="" class="Shop-Now">Shop Now</a>
+        </div>
+
+    </header>
+    <!-- Header and Home Page Ends -->
+
+    <!-- Product Section Starts -->
+    <section class="ProductSection">
+        <h1 class="latest-product">Latest Product</h1>
+        <div class="container">
+            <a href="">
+                <div class="box">
+                    <div class="new">
+                        <p>New</p>
+                    </div>
+                    <img src="p1.png" alt="" class="ProductImage P1">
+                    <div class="ProductName">
+                        <p>Necklace</p>
+                    </div>
+                    <div class="ProductPrice">
+                        <p>Price <span>$200</span></p>
+                    </div>
+                </div>
+            </a>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p2.png" alt="" class="ProductImage P2">
+                <div class="ProductName">
+                    <p>Necklace</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$300</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p3.png" alt="" class="ProductImage P3">
+                <div class="ProductName">
+                    <p>Necklace</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span> $110</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p4.png" alt="" class="ProductImage P4">
+                <div class="ProductName">
+                    <p>Ring</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$45</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p5.png" alt="" class="ProductImage P4">
+                <div class="ProductName">
+                    <p>Ring</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$95</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p6.png" alt="" class="ProductImage P6">
+                <div class="ProductName">
+                    <p>Earing</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$50</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p7.png" alt="" class="ProductImage P7">
+                <div class="ProductName">
+                    <p>Earing</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$400</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="new">
+                    <p>New</p>
+                </div>
+                <img src="p8.png" alt="" class="ProductImage P8">
+                <div class="ProductName">
+                    <p>Necklace</p>
+                </div>
+                <div class="ProductPrice">
+                    <p>Price <span>$450</span></p>
+                </div>
+            </div>
+            <div class="LatestProductButton">
+                <a href="" class="ViewAllProduct">View All Products</a>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- About Section Start -->
+    <section class="about">
+        <div class="content">
+            <div class="blackBlock">
+            </div>
+            <img src="about-img.jpg" alt="">
+            <div class="aboutHeading">
+                <h1>ABOUT US</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam
+                    repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est
+                    corporis tempore.</p>
+                <div class="button-readMore">
+                    <a href="about.html" class="Read-More">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- After About Before BlogSection Starts -->
+    <section class="AfterAbout">
+        <div class="AA-Content">
+            <div class="AA-Part">
+                <div class="AA-Part1">
+                    <img src="o1.jpg" alt="">
+                    <div class="offer">
+                        <h1>Upto 15% Off</h1>
+                        <br>
+                        <a href="" class="Shop-Now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="AA-Part Part2">
+                <div class="AA-Image1">
+                    <img src="o2.jpg" alt="">
+                    <div class="offer-A">
+                        <h1>Upto 10% Off</h1>
+                        <br>
+                        <a href="" class="Shop-Now">Shop Now</a>
+                    </div>
+                </div>
+                <div class="AA-Image2">
+                    <img src="o3.jpg" alt="">
+                    <div class="offer-B">
+                        <h1>Upto 20% Off</h1>
+                        <br>
+                        <a href="" class="Shop-Now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- After About Before Blog Section Ends -->
+
+    <!-- Blog Section Start -->
+    <section class="blog">
+        <h1 class="latest-product">LATEST FROM BLOG</h1>
+        <div class="blog-box">
+            <div class="blog1">
+                <img src="b1.jpg" alt="">
+                <div class="blog-date">
+                    <p>14 <br> July</p>
+                </div>
+                <div class="blog-detail">
+                    <h2>Molestiae ad reiciendis dignissimos</h2>
+                    <br>
+                    <p>alteration in some form, by injected humour, or randomised words which don't <br> look even
+                        slightly
+                        believable.</p>
+                    <br>
+                    <a href="" class="blog-bt-ReadMore">Read More</a>
+                </div>
+            </div>
+            <div class="blog2">
+                <img src="b2.jpg" alt="">
+                <div class="blog-date">
+                    <p>14 <br> July</p>
+                </div>
+                <div class="blog-detail">
+                    <h2>Dolores vel maiores voluptatem enim</h2>
+                    <br>
+                    <p>alteration in some form, by injected humour, or randomised words which don't <br>look even
+                        slightly
+                        believable.</p>
+                    <br>
+                    <a href="" class="blog-bt-ReadMore">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- TESTIMONIAL Section Start -->
+    <section class="TESTIMONIAL">
+        <h1 class="latest-product">TESTIMONIAL</h1>
+        <div class="TestimonialCard">
+            <img src="client.jpg" alt="">
+            <h2>Samantha Jonas</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable cIt is a long established
+                fact that a reader will be distracted by the readable c</p>
+            <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <div class="arrow">
+            <a href="">
+                <div class="arrow-left">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="arrow-right">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- TESTIMONIAL Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="end-content">
+            <div class="info">
+                <form action="">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="arrow-right-footer">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="Media">
+                        <div class="socialMedia">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="socialMedia">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="socialMedia">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="endPart">
+                <div class="end-navBar">
+                    <h1>Menu</h1>
+                    <br>
+                    <ul class="footerMenu-ul">
+                        <li class="footerMenu-li"><a href="HealetIndex.html" class="element-End-nav">Home</a></li>
+                        <li class="footerMenu-li"><a href="about.html" class="element-End-nav">About</a></li>
+                        <li class="footerMenu-li"><a href="shop.html" class="element-End-nav">Shop</a></li>
+                        <li class="footerMenu-li"><a href="blog.html" class="element-End-nav">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="instagram">
+                    <h1>Instagram</h1>
+                    <div class="instagramImg">
+                        <div class="imageCover">
+                            <img src="p1.png" height="55px" width="55px" alt="">
+                        </div>
+                        <div class="detailsCover">
+                            <p>long established fact that a reader</p>
+                        </div>
+                    </div>
+                    <div class="instagramImg">
+                        <div class="imageCover">
+                            <img src="p2.png" height="40px" width="30px" alt="">
+                        </div>
+                        <div class="detailsCover">
+                            <p>long established fact that a reader</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="end-aboutus">
+                    <h1>About Us</h1>
+                    <br>
+                    <div class="aboutDetails">
+                        <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters, as opposed to</p>
+                    </div>
+                </div>
+                <div class="Contactus">
+                    <h1>Contact Us</h1>
+                    <div class="ContactDetail">
+                        <a href="" class="element-End-nav">
+                            <div class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h3 class="detailsAlign">Location</h3>
+                            </div>
+                        </a>
+                        <a href="" class="element-End-nav">
+                            <div class="call">
+                                <i class="fa-solid fa-phone"></i>
+                                <h3 class="detailsAlign">Call +01 1234567890</h3>
+                            </div>
+                        </a>
+                        <a href="" class="element-End-nav">
+                            <div class="email">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h3 class="detailsAlign">demo@gmail.com</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copywrite">
+            <p>© 2024 All Rights Reserved By Free Html Templates</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

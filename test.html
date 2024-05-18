@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transparent</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .box {
+            height: 250px;
+            width: 250px;
+            background-color: grey;
+            position: relative;
+            margin: auto;
+            top: 250px;
+        }
+
+        .new {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+
+        }
+
+        .new>p {
+            text-align: center;
+            position: relative;
+            top: 17px;
+        }
+
+        img {
+            height: 140px;
+            width: auto;
+            position: relative;
+            top: 70px;
+            left: 40px;
+        }
+
+        .ProductName {
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            color: black;
+        }
+
+        .ProductPrice {
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            color: black;
+        }
+
+        .ProductPrice>p>span {
+            color: orange;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .fyg {
+            height: 250px;
+            width: 250px;
+            background-color: grey;
+            position: relative;
+            margin: auto;
+            top: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="">
+        <div class="box">
+            <div class="new">
+                <p>New</p>
+            </div>
+            <img src="/HealetProject/p1.png" alt="">
+            <div class="ProductName">
+                <p>Necklace</p>
+            </div>
+            <div class="ProductPrice">
+                <p>Price <span>$200</span></p>
+            </div>
+        </div>
+    </a>
+</body>
+
+</html>
